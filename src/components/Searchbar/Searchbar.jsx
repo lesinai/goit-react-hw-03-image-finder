@@ -13,6 +13,7 @@ export class Searchbar extends Component {
 
   onSubmit = e => {
     e.preventDefault();
+    if (!this.state.input) return;
     this.props.onSubmit(this.state.input);
     this.setState({ input: '' });
   };
